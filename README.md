@@ -1,2 +1,2 @@
 # time
-把new data获取的时间进行解析
+把new Date获取的时间进行解析
