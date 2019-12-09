@@ -10,11 +10,27 @@
 
 <body>
     <script>
+        // 获取时间对象
         var date = new Date();
         console.log(date);
+        console.log(getTime(date));
+
+        function getTime(date) {
+            // 提取
+            let time = [date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date
+                .getSeconds(), date.getDay(), date.getTime()
+            ];
+
+            // 处理星期
+            let week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            // let week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            time[6] = week[time[6]];
+
+            // 拼接字符串
+            str = `${time[0]}年${time[1]}月${time[2]}日 ${time[3]}时${time[4]}分${time[5]}秒 ${time[6]}`;
+            return str;
+        }
     </script>
 </body>
-
-
 
 </html>
